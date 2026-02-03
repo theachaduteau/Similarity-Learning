@@ -1,4 +1,4 @@
-# Project 3A – Similarity Learning in Deep Learning  
+# Project 3A – Similarity Methods in Deep Learning  
 **Supervised and Unsupervised Similarity Methods**
 
 **Author:** Théa Chaduteau  

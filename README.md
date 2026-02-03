@@ -5,7 +5,7 @@
 **Program:** FICM – Mines Nancy (GIMA ID Big Data)  
 **Date:** February 2025
 
----
+
 
 ## 1. Project Overview
 
@@ -20,7 +20,7 @@ Three complementary approaches are implemented and compared:
 
 The project combines **theoretical foundations**, **model implementation**, **experimental evaluation**, and **critical analysis of limitations**.
 
----
+
 
 ## 2. Objectives
 
@@ -34,7 +34,7 @@ The project combines **theoretical foundations**, **model implementation**, **ex
 - Evaluate scalability and robustness on real datasets
 - Analyze trade-offs between accuracy, interpretability, and computational cost
 
----
+
 
 ## 3. Implemented Methods
 
@@ -61,7 +61,7 @@ The project combines **theoretical foundations**, **model implementation**, **ex
 - Well-separated embeddings (t-SNE / LDA)
 - High generalization accuracy on unseen data
 
----
+
 
 ### 3.2 Enhanced Convolutional Autoencoder (Unsupervised)
 
@@ -76,4 +76,65 @@ This model aims to learn **meaningful latent embeddings** usable for clustering.
 - UMAP for dimensionality reduction
 - K-Means clustering in latent space
 
-**Key improvemen**
+**Key improvements over classical autoencoders**
+- Convolutional layers preserve spatial structure
+- Contrastive loss enforces semantic separation
+- Hierarchical feature extraction
+- Robust latent clustering
+
+**Datasets**
+- Custom image sets (dogs, trees)
+- MNIST (validation of scalability)
+
+**Results**
+- Clear cluster separation in latent space
+- Better performance than linear autoencoders
+- Stable unsupervised embeddings
+
+
+
+### 3.3 Levenshtein-Based Similarity (Algorithmic)
+
+**Approach**
+- Custom implementation of Levenshtein distance
+- Applied to:
+  - Textual / categorical sequences
+  - Image features extracted via HOG
+
+**Clustering**
+- Full distance matrix
+- DBSCAN clustering
+
+**Limitations**
+- Quadratic time complexity
+- High memory usage
+- Not scalable to large datasets
+
+**Proposed Improvement**
+- Locality Sensitive Hashing (LSH)
+- Approximate nearest neighbors
+- Significant scalability gains at the cost of approximation
+
+
+
+## 4. Project Structure
+
+```text
+.
+├── report/
+│   └── Project_3A_CHADUTEAU_Thea.pdf
+├── siamese/
+│   ├── model.py
+│   ├── loss.py
+│   ├── train.py
+│   └── evaluation.py
+├── autoencoder/
+│   ├── encoder.py
+│   ├── decoder.py
+│   ├── train.py
+│   └── clustering.py
+├── levenshtein/
+│   ├── distance.py
+│   ├── hog_features.py
+│   └── clustering.py
+└── README.md
